@@ -1,0 +1,34 @@
+# ArguMind local dependencies (CPU, Mac/Linux)
+langchain
+langchain-groq
+langchain-openai
+langgraph>=1.2.5
+langchain-community
+langchain-core
+
+# arXiv (no extra install needed — uses stdlib urllib)
+feedparser          # fallback RSS parsing
+
+# Graph
+networkx
+pyvis
+
+# Embeddings (optional — for semantic agent)
+sentence-transformers
+transformers
+torch
+faiss-cpu
+
+# Vector store (optional)
+chromadb
+
+# API & Frontend
+fastapi
+uvicorn
+streamlit
+pydantic-settings
+python-dotenv
+requests
+numpy
+pandas
+tqdm

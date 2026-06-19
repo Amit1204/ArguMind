@@ -1,0 +1,13 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+outputs/chroma_db/
+outputs/faiss_index/
+.DS_Store
+.vscode/
+.idea/
+mlruns/
