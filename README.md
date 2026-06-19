@@ -1,6 +1,5 @@
 # ArguMind — Adaptive Multi-Agent Evidence Reasoning System
 
-> **Project 2** · ML/AI/DS Portfolio  
 > LangGraph StateGraph · arXiv API · Wikipedia API · NetworkX Citation DAG · Groq / Gemini LLM
 
 ArguMind is a multi-agent system that answers research questions by gathering evidence from arXiv and the web, resolving contradictions, clustering claims semantically, synthesizing consensus, and producing a transparent citation graph.
@@ -136,7 +135,7 @@ POST `/api/v1/query` with `{"query": "your research question"}`.
 
 ## Key Design Decisions
 
-**No training.** Unlike ShopMind (which trains DistilBERT + XGBoost), ArguMind is fully runtime — it reasons over live API data. No datasets, no model files, no GPU.
+**No training.** ArguMind is fully runtime — it reasons over live API data rather than training a model. No datasets, no model files, no GPU.
 
 **Citation DAG as first-class artifact.** Evidence isn't just a list of facts — it's a directed graph where every claim traces back to its sources, and edges encode the *type* of relationship (supports, refutes, extends, supersedes).
 
@@ -190,17 +189,3 @@ ArguMind/
 | OpenAI | Paid | gpt-4o-mini |
 
 A single ArguMind query uses ~5k–15k tokens depending on complexity.
-
----
-
-## Differentiators vs ShopMind
-
-| Aspect | ShopMind | ArguMind |
-|--------|---------|---------|
-| Task | Product sentiment analysis | Research question answering |
-| Training | DistilBERT + XGBoost | None (fully runtime) |
-| Evidence | FAISS vector store | Live arXiv + web |
-| Graph | None | NetworkX Citation DAG |
-| Conflict handling | N/A | Explicit resolution + minority reports |
-| Uncertainty | Confidence score | "I don't know" gate |
-| Retry | None | Back-edge loop via LangGraph |
