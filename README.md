@@ -3,8 +3,7 @@ title: ArguMind
 emoji: 🔍
 colorFrom: blue
 colorTo: indigo
-sdk: streamlit
-app_file: frontend/app.py
+sdk: docker
 pinned: false
 ---
 
