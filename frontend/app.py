@@ -7,7 +7,6 @@ import os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import streamlit as st
-import streamlit.components.v1 as components
 import json
 
 st.set_page_config(
@@ -164,7 +163,7 @@ if "result" in st.session_state:
             st.markdown(legend, unsafe_allow_html=True)
         graph_html = st.session_state.get("graph_html", "")
         if graph_html and "<p>" not in graph_html[:50]:
-            components.html(graph_html, height=520, scrolling=False)
+            st.iframe(graph_html, height=520)
         else:
             st.info("Install pyvis to view graph: `pip install pyvis`")
         col_a, col_b = st.columns(2)
