@@ -1,0 +1,22 @@
+# ArguMind — Hugging Face Spaces requirements (lean, no GPU/training deps)
+langchain
+langchain-groq
+langchain-openai
+langgraph>=1.2.5
+langchain-core
+
+# arXiv (uses stdlib urllib; feedparser is a fallback RSS parser)
+feedparser
+
+# Citation graph
+networkx
+pyvis
+
+# Frontend + config
+streamlit
+pydantic-settings
+python-dotenv
+requests
+numpy
+pandas
+tqdm

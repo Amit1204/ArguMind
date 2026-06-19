@@ -1,3 +1,13 @@
+---
+title: ArguMind
+emoji: 🔍
+colorFrom: blue
+colorTo: indigo
+sdk: streamlit
+app_file: frontend/app.py
+pinned: false
+---
+
 # ArguMind — Adaptive Multi-Agent Evidence Reasoning System
 
 > LangGraph StateGraph · arXiv API · Wikipedia API · NetworkX Citation DAG · Groq / Gemini LLM
